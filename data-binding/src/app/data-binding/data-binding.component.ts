@@ -10,15 +10,19 @@ export class DataBindingComponent implements OnInit {
 
   url:string = 'http://loiane.com';
   a: boolean = true;
-  
+  urlImagem: string = 'http://lorempixel.com/400/200/nature/';
 
   getValor(){ 
 
-return 2;
+
   }
+
   getTrue() {
+
   return true;
+
 }
+
   constructor() { }
 
   ngOnInit() {
