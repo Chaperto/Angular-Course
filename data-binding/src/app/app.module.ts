@@ -6,12 +6,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { InputPropretyComponent } from './input-proprety/input-proprety.component';
+import { OutputPropretyComponent } from './output-proprety/output-proprety.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    InputPropretyComponent 
+    InputPropretyComponent,
+    OutputPropretyComponent 
   ],
 
   imports: [

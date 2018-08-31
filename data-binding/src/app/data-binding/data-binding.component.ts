@@ -15,7 +15,7 @@ export class DataBindingComponent implements OnInit {
   valorSalvo: string  = '';
   isMouseOver: boolean = false;
   nome: string = '';
-
+  contador: number = 0;
 nomeDoCurso: string = "Angular";
 
     pessoa: any = {
@@ -63,9 +63,14 @@ onKeyUp(evento:KeyboardEvent){
 
 this.valorAtual = (<HTMLInputElement>event.target).value; 
 
+
+
 }
 
 
+onMudouValor(evento){ 
+  console.log(evento.novoValor);
+}
 
   constructor() { }
 

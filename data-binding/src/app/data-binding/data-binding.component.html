@@ -122,8 +122,9 @@
 
     <p class="lead">Você digitou: {{  nome  }}</p>
     <button class = "btn btn-primary"
-    (click)="Reset()"
-    >  RESET </button>
+    (click)="Reset()">
+      RESET 
+    </button>
 
 
 
@@ -135,10 +136,19 @@
 <section class = "input-output-propreties">
 
   <article>
-      <h3 class = "display-4">c
+      <h3 class = "display-4">
         Input/Output Propreties
       </h3>
+      <br>
+
       <app-curso [nome] = "nomeDoCurso" ></app-curso>
+      
+      <contador
+      (mudouValor)="onMudouValor($event)"
+      >
+
+      </contador>
+
   </article>
 
 
