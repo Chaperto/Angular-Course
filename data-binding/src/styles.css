@@ -2,8 +2,27 @@
 @import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
 
 body {
-    background-color: rgb(220, 255, 243);
-    padding: 25px;
-    margin: 10px;
     
+    background-color: rgb(255, 233, 185);
+    padding: 25px;
+    margin: 100px 100px;
+    text-align: center;
+  
+    
+}
+
+.class-style-binding {
+    text-align: center;
+}
+.event-binding {
+    
+    text-align: center;
+}
+
+
+.two-way-data-biding{ 
+
+    text-align: center;
+
+
 }

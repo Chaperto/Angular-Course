@@ -11,9 +11,21 @@ export class DataBindingComponent implements OnInit {
   url:string = 'http://loiane.com';
   a: boolean = true;
   urlImagem: string = 'http://lorempixel.com/400/200/nature/';
+  valorAtual: string = '';
+  valorSalvo: string  = '';
+  isMouseOver: boolean = false;
+  nome: string = '';
+
+nomeDoCurso: string = "Angular";
+
+    pessoa: any = {
+      nome: "",
+      idade: ""
+    }  
 
   getValor(){ 
 
+    return 1;
 
   }
 
@@ -22,6 +34,38 @@ export class DataBindingComponent implements OnInit {
   return true;
 
 }
+Reset(){
+  this.nome = '';
+  this.pessoa.nome =  "";
+
+  this.pessoa.idade =  "";
+ }
+
+salvarValor(valor) {
+
+  this.valorSalvo = valor;
+
+}
+
+
+botaoClicado(){
+  return alert('Botao clicado!');
+
+}
+onMouseOverOut(){ 
+  
+this.isMouseOver = !this.isMouseOver;
+
+}
+onKeyUp(evento:KeyboardEvent){
+
+
+
+this.valorAtual = (<HTMLInputElement>event.target).value; 
+
+}
+
+
 
   constructor() { }
 
