@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TesteComponent } from './teste.component';
+import { DiretivaNgclassComponent } from './diretiva-ngclass.component';
 
-describe('TesteComponent', () => {
-  let component: TesteComponent;
-  let fixture: ComponentFixture<TesteComponent>;
+describe('DiretivaNgclassComponent', () => {
+  let component: DiretivaNgclassComponent;
+  let fixture: ComponentFixture<DiretivaNgclassComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TesteComponent ]
+      declarations: [ DiretivaNgclassComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TesteComponent);
+    fixture = TestBed.createComponent(DiretivaNgclassComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

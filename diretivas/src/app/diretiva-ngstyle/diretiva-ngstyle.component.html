@@ -1,0 +1,15 @@
+
+
+<h3 class= "display-4">
+  ngStyle
+</h3>
+<br><br>
+<button
+[style.backgroundColor] = "ativo ? 'blue' : 'gray'"
+[style.color]="ativo ? 'white': 'black'"
+[style.fontWeight] = "ativo? 'bold': 'normal'"
+[style.fontSize] =  "tamanhoFonte + 'px'"
+(click)="mudarAtivo()"
+>Switch me</button>
+<br>
+<input type="text" [(ngModel)]="tamanhoFonte">

@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body
+{
+    text-align: center;
+    background-color: rgb(128, 155, 255);
+}
