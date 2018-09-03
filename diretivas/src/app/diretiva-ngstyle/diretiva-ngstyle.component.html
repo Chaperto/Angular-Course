@@ -5,10 +5,12 @@
 </h3>
 <br><br>
 <button
-[style.backgroundColor] = "ativo ? 'blue' : 'gray'"
-[style.color]="ativo ? 'white': 'black'"
-[style.fontWeight] = "ativo? 'bold': 'normal'"
-[style.fontSize] =  "tamanhoFonte + 'px'"
+[ngStyle = "{
+' backgroundColor': (ativo ? 'blue' : 'gray'),
+  color: (ativo ? 'white': 'black'),
+  fontWeight: (ativo? 'bold': 'normal'),
+  fontSize: (tamanhoFonte + 'px')
+}"]
 (click)="mudarAtivo()"
 >Switch me</button>
 <br>
