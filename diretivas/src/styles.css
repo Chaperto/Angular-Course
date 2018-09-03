@@ -4,5 +4,9 @@
 body
 {
     text-align: center;
+
     background-color: rgb(128, 155, 255);
+}
+p {
+    font-size: 30px;
 }
