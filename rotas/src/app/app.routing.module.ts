@@ -1,3 +1,5 @@
+import { CursosGuard } from './guards/cursos.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { NgModule } from '@angular/core';
@@ -12,12 +14,18 @@ import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso
 
 
 const appRoutes: Routes = [
-    
-        {path: '', component: HomeComponent},
+
+      {path: '', component: HomeComponent,
+        canActivate: [AuthGuard]
+     },
         {path: 'login', component: LoginComponent},
-        {path: 'cursos', component: CursosComponent},
-        {path: 'curso/:id', component: CursoDetalheComponent},
-        {path: 'naoEncontrado', component: CursoNaoEncontradoComponent }
+        {path: 'cursos', component: CursosComponent,
+        canActivate: [AuthGuard],
+        canActivateChild: [CursosGuard},
+        {path: 'curso/:id', component: CursoDetalheComponent,
+        canActivate: [AuthGuard] },
+        {path: 'naoEncontrado', component: CursoNaoEncontradoComponent,
+        canActivate: [AuthGuard]  }
     
 ];
 

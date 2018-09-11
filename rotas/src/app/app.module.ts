@@ -1,4 +1,4 @@
-import { CursosModule } from './cursos/cursos.module';
+import { AuthGuard } from './guards/auth.guard';
 import { FormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +12,11 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 //import { CursosService } from './cursos/cursos.service';
 //import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 import { AppRoutingModule } from './app.routing.module';
-
+//import { AlunosComponent } from './alunos/alunos.component';
+import { AuthService } from './login/auth.service';
+import { AlunosModule } from './alunos/alunos.module';
+import { CursosModule } from './cursos/cursos.module';
+import { CursosGuard } from './guards/cursos.guard';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import { AppRoutingModule } from './app.routing.module';
     LoginComponent,
     //CursosComponent,
     CabecalhoComponent,
+    
     //CursoDetalheComponent,
     //CursoNaoEncontradoComponent
   ],
@@ -29,11 +34,15 @@ import { AppRoutingModule } from './app.routing.module';
     routing,
     FormsModule,
     CursosModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlunosModule
   
   ],
   providers: [
     //CursosService
+    AuthService,
+    AuthGuard,
+    CursosGuard
   ],
   bootstrap: [AppComponent]
 })
