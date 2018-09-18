@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 // import { TemplateFormComponent } from './template-form/template-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CampoControlErroComponent } from './campo-control-erro/campo-control-erro.component';
 // import { CampoControlErroComponent } from './campo-control-erro/campo-control-erro.component';
 
 @NgModule({
   declarations: [
     AppComponent
+
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DataFormModule
 
   ],
-  providers: [],
+  providers: [
+    CampoControlErroComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

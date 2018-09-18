@@ -24,7 +24,6 @@ export class TemplateFormComponent implements OnInit {
 
 
   ngOnInit() {
-    .
   }
 
   onSubmit(form) {
@@ -50,7 +49,7 @@ consultaCEP(cep, form) {
 
     cep = cep.replace(/\D/g, '');
 
-    // Verifica se campo cep possui valor informado.
+       // Verifica se campo cep possui valor informado.
     if (cep !== '') {
       // Expressão regular para validar o CEP.
       const validacep = /^[0-9]{8}$/;

@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CampoControlErroComponent implements OnInit {
  @Input() mostrarErro: boolean;
- @Input() msgErro: string= 'Campo Obrigatório';
+ @Input() msgErro = 'Campo Obrigatório';
   constructor() { }
 
   ngOnInit() {
